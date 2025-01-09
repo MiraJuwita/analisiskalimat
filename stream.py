@@ -28,7 +28,7 @@ if st.button('Lakukan Analisis'):
     if input_text.strip():
         # Preprocessing input
         sequence = tokenizer.texts_to_sequences([input_text])
-        padded_sequence = pad_sequences(sequence, maxlen=100)  # Sesuaikan dengan panjang input model Anda
+        padded_sequence = pad_sequences(sequence, maxlen=250)  # Sesuaikan dengan panjang input model Anda
 
         # Prediksi
         prediction = model_bilstm.predict(padded_sequence)
